@@ -4,50 +4,91 @@
 <title>Mainpage</title>
 </head>
 
-<body bgcolor="lightblue">
+<body>
 
-<table width="100%" border="0" cellspacing="0">
-<tr>
+<div style="background-color:black; padding:15px; text-align:center;">
+  
+  <a href="index.html">
+    <button style="height:50px; width:120px; font-size:16px; margin:5px;">
+      Home
+    </button>
+  </a>
 
-<td width="33%">
-<a href="index.html">
-<button style="width:100%; height:60px; border-radius:10px; font-size:30px;color:red;">
-Home
-</button>
-</a>
-</td>
+  <a href="drivers.html">
+    <button style="height:50px; width:120px; font-size:16px; margin:5px;">
+      Drivers
+    </button>
+  </a>
 
-<td width="33%">
-<a href="About_The_Creator.html">
-<button style="width:100%; height:60px; border-radius:10px; font-size:30px;color:green;">
-About Me
-</button>
-</a>
-</td>
+  <a href="About_The_Creator.html">
+    <button style="height:50px; width:120px; font-size:16px; margin:5px;">
+      About
+    </button>
+  </a>
 
-<td width="34%">
-<a href="Login.html">
-<button style="width:100%; height:60px; border-radius:10px; font-size:30px;color:blue;">
-Login
-</button>
-</a>
-</td>
+</div>
 
-</tr>
-</table>
-<p align="center" style="position:fixed; bottom:0; width:100%;">
-© 2026 Vihal Singh
-</p>
-
-<h2 id="welcome"></h2>
+<button onclick="darkMode()">Dark Mode</button>
 
 <script>
-var name = localStorage.getItem("lastUser");
-
-if(name && name !== "null"){
-  document.getElementById("welcome").innerHTML = "Welcome, " + name + "!";
-} else {
-  document.getElementById("welcome").innerHTML = "Welcome!";
+function darkMode(){
+  document.body.style.backgroundColor = "black";
+  document.body.style.color = "white";
 }
-</script></body>
+</script>
+
+
+<button onclick="lightMode()">Light Mode</button>
+
+<script>
+function lightMode(){
+  document.body.style.backgroundColor = "white";
+  document.body.style.color = "black";
+}
+</script>
+	
+
+<h1>What is Formula 1?</h1>
+<p>
+Formula 1 is the highest level of car racing in the world. It features the fastest cars and the best drivers competing in races called Grand Prix.
+</p>
+
+<hr>
+
+<h2 align="center" style="background-color:black; color:white; padding:10px;">
+📰 Latest F1 News
+</h2>
+
+
+<div style="background-color:black; color:white; padding:15px; margin:10px; border-radius:10px; transition:0.3s; box-shadow:0px 0px 10px gray;"
+onmouseover="this.style.transform='scale(1.05)'"
+onmouseout="this.style.transform='scale(1)'">
+
+  <h3>Mercedes Domination continues</h3>
+  <p> The Silver Arrows are still on the top of the table as Kimi wins his 2nd Grand Prix this season.</p>
+
+</div>
+
+
+
+<div style="background-color:red; color:white; padding:15px; margin:10px; border-radius:10px; transition:0.3s; box-shadow:0px 0px 10px gray;"
+onmouseover="this.style.transform='scale(1.05)'"
+onmouseout="this.style.transform='scale(1)'">
+
+  <h3> Ferrari shows strong pace</h3>
+  <p>Ferrari is improving and competing strongly with the Mercs this season.</p>
+
+</div>
+
+
+
+<div style="background-color:#1e2a78; color:white; padding:15px; margin:10px; border-radius:10px; transition:0.3s; box-shadow:0px 0px 10px gray;"
+onmouseover="this.style.transform='scale(1.05)'"
+onmouseout="this.style.transform='scale(1)'">
+
+  <h3>RedBull Comeback?</h3>
+  <p>RedBull is working overtime to return to the top , as Max has said if he doesnt get a Championship Winning car , he will leave RB by 2027.</p>
+
+</div>
+</body>
 </html>
